@@ -1,0 +1,256 @@
+/* =========================================
+   STYLE.CSS - PHIÊN BẢN MODERN VIP (PRO)
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* --- BẢNG MÀU HIỆN ĐẠI --- */
+    --primary: #4e73df;
+    --secondary: #858796;
+    --success: #1cc88a;
+    --danger: #e74a3b;
+    --warning: #f6c23e;
+    
+    /* Gradient Chủ Đạo (Tím - Xanh) */
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-hover: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    --gradient-gold: linear-gradient(135deg, #fce38a 0%, #f38181 100%);
+    
+    /* Cấu hình Shadow & Border */
+    --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.15);
+    --radius-xl: 16px;
+    --radius-md: 10px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #f8f9fc; /* Nền xám nhạt dịu mắt */
+    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 30px 30px; /* Họa tiết chấm bi mờ hiện đại */
+    color: #5a5c69;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* THANH CUỘN (SCROLLBAR) */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
+
+/* =========================================
+   1. NAVBAR - CLEAN & STICKY
+   ========================================= */
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.03);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-brand {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800 !important;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+/* =========================================
+   2. CARD SẢN PHẨM - NEUMORPHISM STYLE
+   ========================================= */
+.card-product { 
+    border: none !important; 
+    border-radius: var(--radius-xl) !important; 
+    background: #fff; 
+    box-shadow: var(--shadow-soft); 
+    height: 100%; 
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+}
+
+/* Hiệu ứng khi rê chuột */
+.card-product:hover { 
+    top: -10px;
+    box-shadow: var(--shadow-hover);
+}
+
+/* Tiêu đề sản phẩm */
+.card-product h5 { 
+    font-weight: 700; 
+    color: #2e384d; 
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Giá tiền */
+.text-danger { 
+    color: #4e73df !important; /* Đổi màu giá thành xanh cho sang */
+    font-weight: 800 !important;
+    background: rgba(78, 115, 223, 0.1);
+    padding: 5px 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Badge trạng thái */
+.badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* =========================================
+   3. BUTTONS - GRADIENT HIỆN ĐẠI
+   ========================================= */
+.btn { 
+    border-radius: var(--radius-md) !important; 
+    font-weight: 600 !important; 
+    border: none !important; 
+    transition: all 0.3s ease;
+}
+
+/* Nút chính (Mua hàng, Nạp tiền) */
+.btn-primary { 
+    background: var(--gradient-primary); 
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    color: white !important;
+}
+
+.btn-primary:hover { 
+    background: var(--gradient-hover); 
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Nút phụ */
+.btn-outline-secondary {
+    border: 2px solid #e3e6f0 !important;
+    color: #858796 !important;
+}
+.btn-outline-secondary:hover {
+    background: #f8f9fc;
+    color: #2e384d !important;
+    border-color: #d1d3e2 !important;
+}
+
+/* =========================================
+   4. TIÊU ĐỀ & DANH MỤC
+   ========================================= */
+.cat-title { 
+    font-weight: 800;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin: 40px 0 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Dấu gạch trang trí bên cạnh tiêu đề */
+.cat-title::before { 
+    content: ''; 
+    display: inline-block;
+    width: 5px; height: 25px;
+    background: var(--gradient-primary);
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
+/* =========================================
+   5. BẢNG XẾP HẠNG (RANKING)
+   ========================================= */
+.rank-card {
+    background: #fff;
+    border-radius: var(--radius-xl);
+    border: none;
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+}
+
+.rank-header {
+    background: #fff;
+    color: #2c3e50;
+    padding: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.rank-table td {
+    padding: 15px;
+    border-bottom: 1px dashed #f0f0f0;
+    color: #5a5c69;
+    font-weight: 500;
+}
+
+/* Top 1 Highlight */
+.rank-row:first-child {
+    background: linear-gradient(to right, rgba(252, 227, 138, 0.2), rgba(243, 129, 129, 0.1));
+}
+
+/* =========================================
+   6. NÚT LIÊN HỆ NỔI (FLOATING)
+   ========================================= */
+.float-contact { position: fixed; bottom: 30px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 15px; }
+.btn-float { 
+    width: 55px; height: 55px; border-radius: 50%; 
+    display: flex; align-items: center; justify-content: center; 
+    color: white !important; font-size: 24px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+}
+.btn-float:hover { transform: scale(1.15); }
+.zalo { background: #0068ff; }
+.tele { background: #229ed9; }
+
+/* =========================================
+   7. MODAL & KHÁC
+   ========================================= */
+.modal-content {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+.modal-header { border-bottom: 1px solid #f0f0f0; padding: 20px 30px; }
+.modal-body { padding: 30px; }
+
+.copy-box {
+    background: #f1f5f9; padding: 15px; 
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px; font-family: 'Consolas', monospace; 
+    font-weight: 600; color: #334155;
+    word-break: break-all;
+}
+
+.alert-primary {
+    background: #fff;
+    border-left: 4px solid #4e73df;
+    color: #4e73df;
+    box-shadow: var(--shadow-soft);
+}
+
+/* Input Form */
+.form-control {
+    border: 1px solid #d1d3e2 !important;
+    border-radius: var(--radius-md) !important;
+    padding: 12px 15px !important;
+    font-size: 0.95rem;
+}
+.form-control:focus {
+    border-color: #4e73df !important;
+    box-shadow: 0 0 0 4px rgba(78, 115, 223, 0.1) !important;
+}
+
+/* Xóa các class cũ */
+.snake-bg, .flower { display: none !important; }
