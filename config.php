@@ -15,10 +15,10 @@ if (session_status() == PHP_SESSION_NONE) {
 
 // 4. Thông tin kết nối Database (InfinityFree)
 // Lưu ý: Mật khẩu $pass là mật khẩu vPanel (hosting) của bạn
-$host   = "sql110.infinityfree.com";     // Máy chủ MySQL
-$user   = "if0_40823905";                // Tên đăng nhập MySQL
-$pass   = "s4Lc2Z1FP6d";                 // Mật khẩu Hosting (Bạn đã điền sẵn)
-$dbname = "if0_40823905_shoppremium";    // Tên Database
+$host   = "${{RAILWAY_PRIVATE_DOMAIN}}";     // Máy chủ MySQL
+$user   = "root";                // Tên đăng nhập MySQL
+$pass   = "${{MYSQL_ROOT_PASSWORD}}";                 // Mật khẩu Hosting (Bạn đã điền sẵn)
+$dbname = "railway";    // Tên Database
 
 // 5. Kết nối Database
 $conn = mysqli_connect($host, $user, $pass, $dbname);
