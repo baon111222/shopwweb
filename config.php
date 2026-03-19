@@ -15,7 +15,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 // 4. Thông tin kết nối Database (InfinityFree)
 // Lưu ý: Mật khẩu $pass là mật khẩu vPanel (hosting) của bạn
-$host   = "autorack.proxy.rlwy.net";     // Máy chủ MySQL
+$host   = "mysql://root:LphncSpuDavnTOYUaoiRkgMqZIzvwIXS@autorack.proxy.rlwy.net:55174/railway";     // Máy chủ MySQL
 $user   = "root";                // Tên đăng nhập MySQL
 $pass   = "LphncSpuDavnTOYUaoiRkgMqZIzvwIXS";                 // Mật khẩu Hosting (Bạn đã điền sẵn)
 $dbname = "railway";    // Tên Database
