@@ -1,13 +1,18 @@
 FROM php:8.2-apache
 
-# bật rewrite (tránh lỗi web)
+# TẮT mpm_event (gây lỗi)
+RUN a2dismod mpm_event
+
+# BẬT mpm_prefork (đúng cho PHP)
+RUN a2enmod mpm_prefork
+
+# bật rewrite
 RUN a2enmod rewrite
 
-# copy toàn bộ code vào web root
+# copy code
 COPY . /var/www/html/
 
-# set quyền (rất quan trọng)
+# set quyền
 RUN chmod -R 755 /var/www/html
 
-# expose port
 EXPOSE 80
