@@ -4,7 +4,6 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Các đoạn code bên dưới của bạn giữ nguyên...
-<?php
 // --- CẤU HÌNH HỆ THỐNG SHOP ---
 
 // 1. Tắt báo lỗi hiển thị ra màn hình (Bảo mật)
