@@ -19,7 +19,7 @@ $host   = "mysql.railway.internal";     // Máy chủ MySQL
 $user   = "root";                // Tên đăng nhập MySQL
 $pass   = "LphncSpuDavnTOYUaoiRkgMqZIzvwIXS";                 // Mật khẩu Hosting (Bạn đã điền sẵn)
 $dbname = "railway";    // Tên Database
-
+$port   = 3306;
 // 5. Kết nối Database
 $conn = mysqli_connect($host, $user, $pass, $dbname);
 
