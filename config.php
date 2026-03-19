@@ -18,7 +18,7 @@ if (session_status() == PHP_SESSION_NONE) {
 // Lưu ý: Mật khẩu $pass là mật khẩu vPanel (hosting) của bạn
 $host   = "mysql.railway.internal";     // Máy chủ MySQL
 $user   = "root";                // Tên đăng nhập MySQL
-$pass   = "LphncSpuDavnTOYUaoiRkgMqZIzvwIXS";                 // Mật khẩu Hosting (Bạn đã điền sẵn)
+$pass   = "";                 // Mật khẩu Hosting (Bạn đã điền sẵn)
 $dbname = "railway";    // Tên Database
 $port   = 3306;
 // 5. Kết nối Database
