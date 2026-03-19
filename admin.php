@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include 'config.php'; 
 
 // --- BẢO MẬT ---
 if(!isset($_SESSION['user_id'])) { header("Location: login.php"); exit(); }
